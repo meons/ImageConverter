@@ -60,6 +60,38 @@ namespace CSTiffImageConverter
             }
         }
 
+        // Function to convert tiff to bmp
+        public static string[] ConvertTiffToBmp(string fileName)
+        {
+            using (Image imageFile = Image.FromFile(fileName))
+            {
+                FrameDimension frameDimensions = new FrameDimension(
+                    imageFile.FrameDimensionsList[0]);
+
+                // Gets the number of pages from the tiff image (if multipage)
+                int frameNum = imageFile.GetFrameCount(frameDimensions);
+                string[] jpegPaths = new string[frameNum];
+
+                for (int frame = 0; frame < frameNum; frame++)
+                {
+                    // Selects one frame at a time and save as jpeg.
+                    imageFile.SelectActiveFrame(frameDimensions, frame);
+                    using (Bitmap bmp = new Bitmap(imageFile))
+                    {
+                        jpegPaths[frame] = String.Format("{0}\\{1}{2}.bmp", 
+                            Path.GetDirectoryName(fileName),
+                            Path.GetFileNameWithoutExtension(fileName), 
+                            frame);
+                        bmp.Save(jpegPaths[frame], ImageFormat.Bmp);
+                    }
+                }
+
+                return jpegPaths;
+            }
+        }
+
+        
+
         /// <summary>
         /// Converts jpeg imagae(s) to tiff image(s).
         /// </summary>

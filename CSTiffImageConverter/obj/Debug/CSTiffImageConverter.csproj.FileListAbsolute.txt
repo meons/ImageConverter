@@ -1,0 +1,10 @@
+C:\Users\Simeon\Desktop\Projet Test Unit\ImageConverter\Debug\sample.tif
+C:\Users\Simeon\Desktop\Projet Test Unit\ImageConverter\Debug\CSTiffImageConverter.exe
+C:\Users\Simeon\Desktop\Projet Test Unit\ImageConverter\Debug\CSTiffImageConverter.pdb
+C:\Users\Simeon\Desktop\Projet Test Unit\ImageConverter\CSTiffImageConverter\obj\Debug\CSTiffImageConverter.csprojResolveAssemblyReference.cache
+C:\Users\Simeon\Desktop\Projet Test Unit\ImageConverter\CSTiffImageConverter\obj\Debug\CSTiffImageConverter.MainForm.resources
+C:\Users\Simeon\Desktop\Projet Test Unit\ImageConverter\CSTiffImageConverter\obj\Debug\CSTiffImageConverter.NewForm.resources
+C:\Users\Simeon\Desktop\Projet Test Unit\ImageConverter\CSTiffImageConverter\obj\Debug\CSTiffImageConverter.Properties.Resources.resources
+C:\Users\Simeon\Desktop\Projet Test Unit\ImageConverter\CSTiffImageConverter\obj\Debug\CSTiffImageConverter.csproj.GenerateResource.Cache
+C:\Users\Simeon\Desktop\Projet Test Unit\ImageConverter\CSTiffImageConverter\obj\Debug\CSTiffImageConverter.exe
+C:\Users\Simeon\Desktop\Projet Test Unit\ImageConverter\CSTiffImageConverter\obj\Debug\CSTiffImageConverter.pdb

@@ -80,9 +80,23 @@ namespace CSTiffImageConverter
             }
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+        private void btnToBmp_Click(object sender, EventArgs e)
         {
+            dlgOpenFileDialog.Multiselect = false;
+            dlgOpenFileDialog.Filter = "Image files (.tif, .tiff)|*.tif;*.tiff";
 
+            if (dlgOpenFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    TiffImageConverter.ConvertTiffToBmp(dlgOpenFileDialog.FileName);
+                    MessageBox.Show("Image conversion completed.");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred: " + ex.Message, "Error");
+                }
+            }
         }
     }
 }
