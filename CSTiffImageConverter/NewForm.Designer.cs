@@ -31,9 +31,9 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnOpenPicture = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnConvert = new System.Windows.Forms.Button();
             this.cmbOutput = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblStatus = new System.Windows.Forms.Label();
             this.dlgOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -62,7 +62,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button2);
+            this.groupBox2.Controls.Add(this.btnConvert);
             this.groupBox2.Controls.Add(this.cmbOutput);
             this.groupBox2.Location = new System.Drawing.Point(12, 130);
             this.groupBox2.Name = "groupBox2";
@@ -71,14 +71,15 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Output";
             // 
-            // button2
+            // btnConvert
             // 
-            this.button2.Location = new System.Drawing.Point(99, 74);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(108, 44);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Convert";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnConvert.Location = new System.Drawing.Point(99, 74);
+            this.btnConvert.Name = "btnConvert";
+            this.btnConvert.Size = new System.Drawing.Size(108, 44);
+            this.btnConvert.TabIndex = 1;
+            this.btnConvert.Text = "Convert";
+            this.btnConvert.UseVisualStyleBackColor = true;
+            this.btnConvert.Click += new System.EventHandler(this.btnConvert_Click);
             // 
             // cmbOutput
             // 
@@ -88,15 +89,15 @@
             this.cmbOutput.Size = new System.Drawing.Size(177, 24);
             this.cmbOutput.TabIndex = 0;
             // 
-            // label1
+            // lblStatus
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 267);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 17);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Status :";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Location = new System.Drawing.Point(12, 267);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(48, 17);
+            this.lblStatus.TabIndex = 2;
+            this.lblStatus.Text = "Status";
+            this.lblStatus.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // dlgOpenFileDialog
             // 
@@ -108,7 +109,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(265, 297);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "NewForm";
@@ -127,8 +128,8 @@
         private System.Windows.Forms.Button btnOpenPicture;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ComboBox cmbOutput;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnConvert;
+        private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.OpenFileDialog dlgOpenFileDialog;
     }
 }
