@@ -8,3 +8,13 @@ C:\Users\Simeon\Desktop\Projet Test Unit\ImageConverter\CSTiffImageConverter\obj
 C:\Users\Simeon\Desktop\Projet Test Unit\ImageConverter\CSTiffImageConverter\obj\Debug\CSTiffImageConverter.csproj.GenerateResource.Cache
 C:\Users\Simeon\Desktop\Projet Test Unit\ImageConverter\CSTiffImageConverter\obj\Debug\CSTiffImageConverter.exe
 C:\Users\Simeon\Desktop\Projet Test Unit\ImageConverter\CSTiffImageConverter\obj\Debug\CSTiffImageConverter.pdb
+D:\Users\lukas_000\WorkspaceProgramme\GitHub\ImageConverter\CSTiffImageConverter\obj\Debug\CSTiffImageConverter.exe
+D:\Users\lukas_000\WorkspaceProgramme\GitHub\ImageConverter\CSTiffImageConverter\obj\Debug\CSTiffImageConverter.pdb
+D:\Users\lukas_000\WorkspaceProgramme\GitHub\ImageConverter\Debug\sample.tif
+D:\Users\lukas_000\WorkspaceProgramme\GitHub\ImageConverter\Debug\CSTiffImageConverter.exe
+D:\Users\lukas_000\WorkspaceProgramme\GitHub\ImageConverter\Debug\CSTiffImageConverter.pdb
+D:\Users\lukas_000\WorkspaceProgramme\GitHub\ImageConverter\CSTiffImageConverter\obj\Debug\CSTiffImageConverter.csprojResolveAssemblyReference.cache
+D:\Users\lukas_000\WorkspaceProgramme\GitHub\ImageConverter\CSTiffImageConverter\obj\Debug\CSTiffImageConverter.MainForm.resources
+D:\Users\lukas_000\WorkspaceProgramme\GitHub\ImageConverter\CSTiffImageConverter\obj\Debug\CSTiffImageConverter.NewForm.resources
+D:\Users\lukas_000\WorkspaceProgramme\GitHub\ImageConverter\CSTiffImageConverter\obj\Debug\CSTiffImageConverter.Properties.Resources.resources
+D:\Users\lukas_000\WorkspaceProgramme\GitHub\ImageConverter\CSTiffImageConverter\obj\Debug\CSTiffImageConverter.csproj.GenerateResource.Cache

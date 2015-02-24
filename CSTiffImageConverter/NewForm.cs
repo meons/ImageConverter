@@ -43,7 +43,7 @@ namespace CSTiffImageConverter
 
         private void btnOpenFile_Click(object sender, EventArgs e)
         {
-            dlgOpenFileDialog.Multiselect = true;
+            dlgOpenFileDialog.Multiselect = false;
             dlgOpenFileDialog.Filter = "Image files (.jpg, .bmp, .tif, .gif)|*.jpg;*.bmp;*.tif;*.gif";
             if (dlgOpenFileDialog.ShowDialog() == DialogResult.OK)
             {
@@ -103,6 +103,30 @@ namespace CSTiffImageConverter
             {
                 Converter.Convert(dlgOpenFileDialog.FileName, outFormat);
                 lblStatus.Text = " Convertion from " + selectedFormat + " to " + outFormat + " done !";
+            }
+        }
+
+        private void btnChooseImages_Click(object sender, EventArgs e)
+        {
+            dlgOpenMultipleFilesDialog.Multiselect = true;
+            dlgOpenMultipleFilesDialog.Filter = "Image files (.jpg, .bmp, .tif, .gif)|*.jpg;*.bmp;*.tif;*.gif";
+
+            if (dlgOpenMultipleFilesDialog.ShowDialog() == DialogResult.OK)
+            {
+                lblStatusMultipageConversion.Text = dlgOpenMultipleFilesDialog.FileNames.Length.ToString() + " Files selected.";
+            }
+        }
+
+        private void btnMergeToTiff_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Converter.MergeToMultipleImagesToTiff(dlgOpenMultipleFilesDialog.FileNames);
+                lblStatusMultipageConversion.Text = "Tiff merging completed.";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message, "Error");
             }
         }
     }
