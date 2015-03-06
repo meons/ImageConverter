@@ -129,5 +129,16 @@ namespace CSTiffImageConverter
                 MessageBox.Show("An error occurred: " + ex.Message, "Error");
             }
         }
+
+        private void btnSelectPictures2_Click(object sender, EventArgs e)
+        {
+            openFileDialogResizer.Multiselect = true;
+            openFileDialogResizer.Filter = "Image files (.jpg, .bmp, .tif, .gif)|*.jpg;*.bmp;*.tif;*.gif";
+
+            if (openFileDialogResizer.ShowDialog() == DialogResult.OK)
+            {
+                lblStatusResizer.Text = openFileDialogResizer.FileNames.Length.ToString() + " Files selected.";
+            }
+        }
     }
 }
