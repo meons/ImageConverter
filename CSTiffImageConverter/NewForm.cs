@@ -139,6 +139,7 @@ namespace CSTiffImageConverter
             {
                 int newWidth = Convert.ToInt32(txb_newWidth.Text);
                 int newHeight = Convert.ToInt32(txb_newHeight.Text);
+                // (Get app path : AppDomain.CurrentDomain.BaseDirectory)
                 string outPath = "C:/Users/Simeon/Desktop/Projet Test Unit/ImageConverter/Debug/Output/";
 
                 foreach(string path in openFileDialogResizer.FileNames)
