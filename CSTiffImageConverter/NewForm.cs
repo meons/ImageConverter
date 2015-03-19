@@ -137,8 +137,30 @@ namespace CSTiffImageConverter
 
             if (openFileDialogResizer.ShowDialog() == DialogResult.OK)
             {
-                lblStatusResizer.Text = openFileDialogResizer.FileNames.Length.ToString() + " Files selected.";
+                int newWidth = Convert.ToInt32(txb_newWidth.Text);
+                int newHeight = Convert.ToInt32(txb_newHeight.Text);
+                string outPath = "C:/Users/Simeon/Desktop/Projet Test Unit/ImageConverter/Debug/Output/";
+
+                foreach(string path in openFileDialogResizer.FileNames)
+                {
+                    var image = Image.FromFile(path); 
+                    var newImage = Resizer.Resize(image, newWidth, newHeight);
+                    string newImageName = "Resized_" + Path.GetFileName(path);
+                    
+                    newImage.Save(outPath + newImageName);
+                }
+                MessageBox.Show(openFileDialogResizer.FileNames.Length.ToString() + " images resized into " + outPath);
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("To never crop an image the size will be adapted on width OR on height. The proportions remain the same.");
         }
     }
 }

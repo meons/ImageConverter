@@ -8,47 +8,23 @@ namespace CSTiffImageConverter
 {
     class Resizer
     {
-        public static Bitmap Resize(Bitmap image, string option)
+        // Resize proportionaly an image by max width and height parameters
+        public static Bitmap Resize(Image image, int maxWidth, int maxHeight)
         {
-            int newHeigth = 1024;
-            int newWidth = 768;
-            int ratio = 0;
+            var ratioX = (double)maxWidth / image.Width; // Width ratio
+            var ratioY = (double)maxHeight / image.Height; // Height ratio
+            // Choose the min ratio for never crop the image
+            var ratio = Math.Min(ratioX, ratioY);
 
-            // If image is smaller than new dimension, it will not be converted to preserve quality
-            if (image.Height < newHeigth && image.Width < newWidth)
-            {
-                Console.WriteLine("Image is already smaller than 1024x728 !");
-                return image;
-            }
+            // Set new dimensions with min ratio
+            var newWidth = (int)(image.Width * ratio);
+            var newHeight = (int)(image.Height * ratio);
 
-            // If image heigth is smaller than 1024
-            if (image.Height < newHeigth)
-            {
-                ratio = newWidth/image.Width;
-                return (Bitmap) (new Bitmap(image, new Size(ratio * image.Height, newWidth)));
-            }
+            // Create new sized image
+            var newImage = new Bitmap(newWidth, newHeight);
+            Graphics.FromImage(newImage).DrawImage(image, 0, 0, newWidth, newHeight);
 
-            // If image width is smaller than 768
-            if (image.Width < newWidth)
-            {
-                ratio = newHeigth / image.Height;
-                return (Bitmap) (new Bitmap(image, new Size(newHeigth, ratio * image.Width)));
-            }
-
-            // propH = proportions based on heigth -> 1024
-            // propW = proportions based on width -> 768
-            switch(option)
-            {
-                case "propH":
-
-                    break;
-                case "propW":
-                    break;
-                default:
-                    break;
-            }
-
-            return image;
+            return newImage;
         }
     }
 }
